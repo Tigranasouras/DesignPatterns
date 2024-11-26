@@ -14,6 +14,11 @@ public class Controller {
         Formatter htmlFormatter = new HTMLFormatter();
         System.out.println("HTML Output:\n" + editor.formatContent(htmlFormatter));
 
+        //Markdown
+        Formatter markdownFormatter = new Markdown();
+        System.out.println("Markdown Output:\n" + editor.formatContent(markdownFormatter));
+
+
 
     }
 
