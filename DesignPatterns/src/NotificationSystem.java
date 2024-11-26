@@ -7,6 +7,16 @@ public class NotificationSystem {
 
         // Send a basic notification
         smsNotification.send("System update: Maintenance scheduled for 9:30am.");
+
+        //Email
+        String userEmail = "user@gmail.com";
+
+        Notification emailNotification = new EmailNotification(userEmail);
+
+        emailNotification.send("System Update: Detailed record is included.");
+
+        
+
     }
 
 }
