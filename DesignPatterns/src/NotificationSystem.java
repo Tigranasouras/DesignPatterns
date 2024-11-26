@@ -16,7 +16,7 @@ public class NotificationSystem {
         emailNotification.send("System Update: Detailed record is included.");
 
         //Slack
-        String workspace = "TeamWorkspace";
+        String workspace = "MainChat";
         String channel = "#Cullinary";
 
         Notification slackNotificaion = new SlackNotification(workspace, channel);
@@ -24,6 +24,13 @@ public class NotificationSystem {
         slackNotificaion.send("System Update: John has inquired on the audit report");
 
 
+        User user = new User("Bobby");
+
+
+
+user.addNotificationPreference(new SMSNotification("(287) 397-3849"));
+user.addNotificationPreference(new EmailNotification("Bobby@gmail.com"));
+user.addNotificationPreference(new SlackNotification("MainChat", "#Cullinary"));
 
 
 
