@@ -15,7 +15,17 @@ public class NotificationSystem {
 
         emailNotification.send("System Update: Detailed record is included.");
 
-        
+        //Slack
+        String workspace = "TeamWorkspace";
+        String channel = "#Cullinary";
+
+        Notification slackNotificaion = new SlackNotification(workspace, channel);
+
+        slackNotificaion.send("System Update: John has inquired on the audit report");
+
+
+
+
 
     }
 
