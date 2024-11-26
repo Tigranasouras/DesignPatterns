@@ -1,8 +1,11 @@
 public class TextFormatter {
     private String content;
+    private Formatter currentFormatter;
+
 
     public TextFormatter() {
         this.content = ""; //initializer of content
+        this.currentFormatter = null; //
     }
 
     public void setContent(String content){
@@ -13,9 +16,14 @@ public class TextFormatter {
         return content; //returns content
     }
 
-    public String formatContent(Formatter formatter){
-        return formatter.format(content); //strategy Pattern implementation
+    public void setFormatter(Formatter formatter){
+        this.currentFormatter = formatter;
     }
+
+    public String formatContent(Formatter formatter){
+        return currentFormatter.format(content); //strategy Pattern implementation
+    } //throw for null, but I can't be bothered to look up how to do this
+
 
 
 
